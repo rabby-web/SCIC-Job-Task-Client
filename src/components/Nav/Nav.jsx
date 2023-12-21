@@ -43,6 +43,20 @@ const Nav = () => {
       </li>
       <li className="text-lg font-semibold">
         <NavLink
+          to="/contract"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending "
+              : isActive
+              ? " bg-blue-01 text-white"
+              : "text-blue-01 "
+          }
+        >
+          Contract
+        </NavLink>
+      </li>
+      <li className="text-lg font-semibold">
+        <NavLink
           to="/dashboard"
           className={({ isActive, isPending }) =>
             isPending
@@ -113,14 +127,19 @@ const Nav = () => {
             </ul>
           </div>
           <a className="p-2 flex gap-4 items-center font-semibold text-2xl">
-            <p className="hidden md:block text-blue-01">Project</p>
+            <p className="hidden md:block text-blue-01">
+              <img
+                src="https://www.technovisionbd.com/wp-content/themes/tet/assets/images/logo.png"
+                alt=""
+              />
+            </p>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div></div>
-        <div className="navbar-end ">
+        <div className="navbar-end">
           {/* <div className="mt-1 mx-2">
             {theme === "dark" ? (
               <button
@@ -147,7 +166,7 @@ const Nav = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-72"
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-slate-100 text-blue-02 rounded-box w-72"
               >
                 <li>
                   <a className="justify-between font-semibold text-blue-01">
