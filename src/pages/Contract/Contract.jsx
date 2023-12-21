@@ -32,7 +32,7 @@ const Contract = () => {
                 id=""
               />
               <button
-                className="py-3 px-10 text-white bg-dark-03 rounded inline-flex gap-3 items-center"
+                className="py-3 px-10 text-white bg-blue-02 rounded inline-flex gap-3 items-center"
                 type="submit"
               >
                 Subscribe <FaPaperPlane></FaPaperPlane>
