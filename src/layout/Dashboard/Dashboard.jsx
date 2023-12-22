@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 // import DashboardMenu from "./DashboardMenu/DashboardMenu";
 import { FaCircleUser } from "react-icons/fa6";
+import logo from "../../assets/logo-pv.png";
 
 const Dashboard = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -21,11 +22,7 @@ const Dashboard = () => {
         <div className="md:w-1/5 bg-white h-screen fixed top-0 left-0">
           <div className="flex items-center pl-5 py-4 h-20 border-b border-gray-200">
             <Link to={"/"} className="mr-3">
-              <img
-                className="w-full hidden md:block"
-                src="https://www.technovisionbd.com/wp-content/themes/tet/assets/images/logo.png"
-                alt=""
-              />
+              <img className="w-28 hidden md:block" src={logo} alt="" />
             </Link>
             {/* <div className="hidden md:block">
               <Typography

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import logo from "../../assets/logo-pv.png";
 
 const Nav = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -128,10 +129,7 @@ const Nav = () => {
           </div>
           <a className="p-2 flex gap-4 items-center font-semibold text-2xl">
             <p className="hidden md:block text-blue-01">
-              <img
-                src="https://www.technovisionbd.com/wp-content/themes/tet/assets/images/logo.png"
-                alt=""
-              />
+              <img src={logo} className="w-28" alt="" />
             </p>
           </a>
         </div>

@@ -1,12 +1,10 @@
+import logo from "../../assets/logo-pv.png";
 const Footer = () => {
   return (
     <div className="bg-[#222935]  md:p-6 p-6">
       <footer className="footer md:p-6 text-white max-w-7xl mx-auto">
         <aside>
-          <img
-            src="https://www.technovisionbd.com/wp-content/themes/tet/assets/images/logo.png"
-            alt=""
-          />
+          <img src={logo} className="w-28" alt="" />
           <p>
             <span className="text-xl">SCC Technovision Inc</span>
             <br />
