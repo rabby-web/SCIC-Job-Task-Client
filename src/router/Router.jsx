@@ -11,6 +11,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AddTask from "../Dashboard/AddTask/AddTask";
 import AllTask from "../Dashboard/AllTask/AllTask";
 import EditTask from "../layout/Dashboard/EditTask";
+import ManageTask from "../layout/Dashboard/ManageTask";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "allTask",
         element: <AllTask></AllTask>,
+      },
+      {
+        path: "manageTask",
+        element: <ManageTask></ManageTask>,
       },
       {
         path: "/dashboard/editTask/:id",

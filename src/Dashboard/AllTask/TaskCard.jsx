@@ -60,12 +60,12 @@ const TaskCard = ({ data }) => {
 
           <div className="flex justify-between mt-3">
             <button onClick={() => handleDeleteTask(_id)}>
-              <MdAutoDelete className="text-2xl" />
+              <MdAutoDelete className="text-2xl text-red-600" />
             </button>
 
             <Link to={`/dashboard/editTask/${_id}`}>
               <button>
-                <FaEdit className="text-2xl" />
+                <FaEdit className="text-2xl text-blue-700" />
               </button>
             </Link>
           </div>
