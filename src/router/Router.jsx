@@ -9,6 +9,7 @@ import Contract from "../pages/Contract/Contract";
 import DashboardHome from "../Dashboard/DashboardHome/DashboardHome";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AddTask from "../Dashboard/AddTask/AddTask";
+import AllTask from "../Dashboard/AllTask/AllTask";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <DashboardHome></DashboardHome>,
+      },
+      {
+        path: "allTask",
+        element: <AllTask></AllTask>,
       },
       {
         path: "addTask",
