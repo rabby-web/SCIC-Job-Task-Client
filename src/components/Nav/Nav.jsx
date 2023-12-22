@@ -69,7 +69,7 @@ const Nav = () => {
           Dashboard
         </NavLink>
       </li>
-      <li className="text-lg font-semibold">
+      {/* <li className="text-lg font-semibold">
         <NavLink
           to="/login"
           className={({ isActive, isPending }) =>
@@ -96,7 +96,7 @@ const Nav = () => {
         >
           Register
         </NavLink>
-      </li>
+      </li> */}
     </>
   );
   return (

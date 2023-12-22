@@ -64,7 +64,9 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/editTask/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/v1/${params.id}/show-task`),
+          fetch(
+            `https://scic-task-server-one.vercel.app/api/v1/${params.id}/show-task`
+          ),
         element: <EditTask></EditTask>,
       },
       {

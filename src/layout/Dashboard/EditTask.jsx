@@ -34,7 +34,10 @@ const EditTask = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .patch(`http://localhost:5000/api/v1/${_id}/edit-task`, editTask)
+          .patch(
+            `https://scic-task-server-one.vercel.app/api/v1/${_id}/edit-task`,
+            editTask
+          )
           .then((res) => {
             if (res.data.modifiedCount > 0) {
               Swal.fire({
