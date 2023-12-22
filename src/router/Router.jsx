@@ -10,6 +10,7 @@ import DashboardHome from "../Dashboard/DashboardHome/DashboardHome";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AddTask from "../Dashboard/AddTask/AddTask";
 import AllTask from "../Dashboard/AllTask/AllTask";
+import EditTask from "../layout/Dashboard/EditTask";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,12 @@ const router = createBrowserRouter([
       {
         path: "allTask",
         element: <AllTask></AllTask>,
+      },
+      {
+        path: "/dashboard/editTask/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/api/v1/${params.id}/show-task`),
+        element: <EditTask></EditTask>,
       },
       {
         path: "addTask",

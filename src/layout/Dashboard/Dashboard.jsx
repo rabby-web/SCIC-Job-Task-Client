@@ -1,12 +1,13 @@
 import { Typography } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
 import DashboardMenu from "./DashboardMenu";
-// import { useContext } from "react";
-// import { AuthContext } from "../../provider/AuthProvider";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 // import DashboardMenu from "./DashboardMenu/DashboardMenu";
+import { FaCircleUser } from "react-icons/fa6";
 
 const Dashboard = () => {
-  // const { user, logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   // const handleSignOut = () => {
   //   logOut()
   //     .then((result) => {
@@ -36,6 +37,7 @@ const Dashboard = () => {
               </Typography>
             </div> */}
           </div>
+
           <div className="p-2">
             <DashboardMenu></DashboardMenu>
           </div>
@@ -52,6 +54,20 @@ const Dashboard = () => {
               >
                 Dashboard
               </Typography>
+              <div className=" flex justify-center items-center">
+                <h2 className="text-center font-medium text-[#2a2a2a] mr-2">
+                  {user?.displayName || "User"}
+                </h2>
+
+                {user.photoURL ? (
+                  <img
+                    className="w-9 h-9 rounded-full border-2 border-gray-300 mr-4"
+                    src={user.photoURL}
+                  />
+                ) : (
+                  <FaCircleUser className="text-3xl mr-4" />
+                )}
+              </div>
             </div>
           </div>
           <div className="flex">
